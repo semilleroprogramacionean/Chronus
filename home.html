@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="semilleroApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Aplicacion FireBase Ejemplo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+
+    <!-- Aplicacion -->
+    <script src="app.js"></script>
+</head>
+<body ng-controller="semilleroControlador">
+    <h1>Horario de Sistemas Operativos</h1>
+    <ul>
+        <li ng-repeat="h in resultado">
+            Dia: <b>{{h.grupo_hora_dia}}</b><br>
+            De: <b>{{h.grupo_horario_hora_inicio}}</b><br>
+            A: <b>{{h.grupo_horario_hora_fin}}</b><br>
+            Profesor: <b>{{h.grupo_horario_docente}}</b><br>
+            Salon: <b>{{h.grupo_horario_salon}}</b>
+        </li>
+    </ul>
+</body>
+</html>
